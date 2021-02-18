@@ -1,6 +1,6 @@
 pragma solidity 0.6.12;
 
-import "@pancakeswap/pancake-swap-lib/contracts/proxy/TransparentUpgradeableProxy.sol";
+import "@pieswap/pie-swap-lib/contracts/proxy/TransparentUpgradeableProxy.sol";
 
 contract IFOUpgradeProxy is TransparentUpgradeableProxy {
 
