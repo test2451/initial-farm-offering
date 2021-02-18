@@ -1,20 +1,20 @@
-# initial-farm-offering
+initial-farm-offering :
 
-[![Actions Status](https://github.com/pancakeswap/inital-farm-offering/workflows/CI/badge.svg)](https://github.com/pancakeswap/inital-farm-offering/actions)
+[![Actions Status](https://github.com/pieswap/inital-farm-offering/workflows/CI/badge.svg)](https://github.com/pieswap/inital-farm-offering/actions)
 
 
-# Local Development
+Local Development:
 
 The following assumes the use of `node@>=12`.
 
-## Install Dependencies
+Install Dependencies:
 
 `yarn`
 
-## Compile Contracts
+Compile Contracts:
 
 `yarn compile`
 
-## Run Tests
+Run Tests:
 
 `yarn test`
