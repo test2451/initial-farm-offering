@@ -1,5 +1,5 @@
 const { expectRevert, time } = require('@openzeppelin/test-helpers');
-const MockBEP20 = artifacts.require('MockBEP20');
+const MockOIP20 = artifacts.require('MockOIP20');
 const IFO = artifacts.require('IFO');
 
 contract('IFO', ([alice, bob, carol, dev, minter]) => {
