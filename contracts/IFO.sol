@@ -1,13 +1,13 @@
 pragma solidity 0.6.12;
 
-import '@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol';
-import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol';
-import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
-import '@pancakeswap/pancake-swap-lib/contracts/utils/ReentrancyGuard.sol';
+import '@pieswap/pie-swap-lib/contracts/math/SafeMath.sol';
+import '@pieswap/pie-swap-lib/contracts/token/OIP20/IOIP20.sol';
+import '@pieswap/pie-swap-lib/contracts/token/OIP20/SafeOIP20.sol';
+import '@pieswap/pie-swap-lib/contracts/utils/ReentrancyGuard.sol';
 
 contract IFO is ReentrancyGuard {
   using SafeMath for uint256;
-  using SafeBEP20 for IBEP20;
+  using SafeOIP20 for IOIP20;
 
   // Info of each user.
   struct UserInfo {
@@ -18,9 +18,9 @@ contract IFO is ReentrancyGuard {
   // admin address
   address public adminAddress;
   // The raising token
-  IBEP20 public lpToken;
+  IOIP20 public lpToken;
   // The offering token
-  IBEP20 public offeringToken;
+  IOIP20 public offeringToken;
   // The block number when IFO starts
   uint256 public startBlock;
   // The block number when IFO ends
@@ -41,8 +41,8 @@ contract IFO is ReentrancyGuard {
   event Harvest(address indexed user, uint256 offeringAmount, uint256 excessAmount);
 
   constructor(
-      IBEP20 _lpToken,
-      IBEP20 _offeringToken,
+      IOIP20 _lpToken,
+      IOIP20 _offeringToken,
       uint256 _startBlock,
       uint256 _endBlock,
       uint256 _offeringAmount,
